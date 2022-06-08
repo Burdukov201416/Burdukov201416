@@ -103,16 +103,23 @@ let resp = function (y){
  * @param cols =  число колонок
  * @return  undefined
  */
-function printNumbers(num, cols) {
-  let str1 = ""
-  let rows = Math.ceil(num / cols); //кол-во строк округлено в большую сторону
-  for (let row = 0; row < rows; ++row) {
-      let str = '';
-      for (let col = 0; col < cols; ++col) {
-          if ((row + rows * col) < num)
-              str += (row + rows * col) + ' ';
-      }
-      str1+=str+"\n";       
+function printNumbers(num,cols) {
+  let rows;
+  let str="";
+  let i;
+  let j;
+  let k;
+  if (num % cols ==0) rows = num/cols;
+	else rows = (Math.trunc(num/cols) + 1);
+  for(i=0; i<rows; i++){
+	  k=i;
+	  for(j=0; j<cols; j++){
+		  str+=k+" ";
+		  k=k+rows;
+		  if (k>num) break;
+	  }
+	  
+	  console.log(str);
+          str="";
   }
-  return str1;
-}
+  }
