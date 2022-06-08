@@ -113,7 +113,7 @@ function printNumbers(num,cols) {
 	else rows = (Math.trunc(num/cols) + 1);
   for(i=0; i<rows; i++){
 	  k=i;
-	  for(j=0; j<cols; j++){
+	  for(j=0; j<cols-1; j++){
 		  str+=k+" ";
 		  k=k+rows;
 		  if (k>num) break;
