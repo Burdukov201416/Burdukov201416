@@ -104,7 +104,7 @@ let resp = function (y){
  * @return  undefined
  */
 function printNumbers(num, cols){
-      let rows = num / cols;
+       let rows = Math.ceil(num / cols);
     for (let row = 0; row <= rows; ++row){ 
         let str = ''; 
         for (let col = 0; col < cols; ++col){ 
