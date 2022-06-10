@@ -1,19 +1,11 @@
-'use strict';
+'use strict'
 /**
- * возвращает дробную часть х
- * @param {nuber} x число
- * @returns number
+ * 
+ * @param {number} num - число 
+ * @returns - число
  */
 function getDecimal(num) {
-    let a = num.toString();
-    a = a.slice(a.indexOf("."));
-    
-    let str = 0 + a;
-    if (Number(num) < 0) {
-        str = 1 - Number(str);
-        str = str.toFixed(a.length - 1);
-    }
-    return (str);
+    return num - Math.floor(num); //округление вниз 
 }
 /**
  * возвращает строку с заглавным первым символом
