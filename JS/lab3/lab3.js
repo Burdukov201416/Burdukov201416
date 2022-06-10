@@ -59,7 +59,14 @@ function camelize(str) {
     }
     return str;
 }
+
 /**
+ * возвращает массив заполненый числами фиббоначи до n-1'го номера
+ * @param {number} N номер числа фиббоначи
+ * @returns string
+ */
+ function fibs(N) {
+     /**
  * возвращает число последовательности фиббоначи
  * @param {number} p номер числа фиббоначи
  * @returns number
@@ -68,8 +75,8 @@ function camelize(str) {
         let a = 0n;
         let b = 1n;
         //Исключения
-        if (p==0) return 0;
-        if (p==1) return 1;
+        if (p==0) return a;
+        if (p==1) return b;
         for (let i = 2; i <= p; i++) {
           let c = a + b;
           a = b;
@@ -77,24 +84,14 @@ function camelize(str) {
         }
         return b;
       }
-/**
- * возвращает массив заполненый числами фиббоначи до n-1'го номера
- * @param {number} N номер числа фиббоначи
- * @returns string
- */
- function fibs(N) {
     let a = [];
-    let str = '';
     if (!Number.isNaN(N))
-        if (N == 0) str = 0;
-        else
             for (let p = 0; p < N; ++p) {
                 a[p] = fib(p);
-                str += a[p] + ' ';
             }
-    else str = NaN;
+    else return NaN;
  
-    return str;
+    return a;
  }
 /**
  * возвращает reverse массив
@@ -104,7 +101,8 @@ function camelize(str) {
 function arrReverseSorted(arr){
 let arr_reserve=[];
 
-arr_reserve=arr.sort((a, b) => b - a);
+arr_reserve=arr;
+    arr_reserve.sort((a, b) => b - a);
 
 alert(arr_reserve);
 }
