@@ -13,7 +13,7 @@ function getDecimal(num) {
         str = 1 - Number(str);
         str = str.toFixed(a.length - 1);
     }
-    return Number(str);
+    return (str);
 }
 /**
  * возвращает строку с заглавным первым символом
