@@ -11,7 +11,7 @@
         let obj = {
             className: 'open menu',
         addClass: function (cls) {
-            if (cls == '') return;
+            if (cls == '') return this;
             if (cls.includes(' ')) {
                 return this;
             }
@@ -40,6 +40,8 @@
         };
         let cls = prompt('Добавьте класс:');
         console.log(obj.addClass(cls));
+        let cll = prompt('delete class:');
+        console.log(obj.removeClass(cll));
 
     </script>
 </body>
